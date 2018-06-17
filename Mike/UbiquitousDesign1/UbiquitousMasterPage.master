@@ -1,0 +1,55 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UbiquitousMasterPage.master.cs" Inherits="UbiquitousMasterPage" %>
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<head runat="server">
+    <link href="images/styles.css" rel="stylesheet" type="text/css" />
+        <asp:ContentPlaceHolder id="TitlePlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="HEADER">
+	<h1>Ubiquitous</h1>
+    <div id="OTHER">
+        <p>
+           &nbsp;Username&nbsp;
+            <asp:TextBox ID="UsernameBox" runat="server"></asp:TextBox>
+           &nbsp;Password&nbsp;
+            <asp:TextBox ID="PwordBox" runat="server"></asp:TextBox>&nbsp;&nbsp;
+            <asp:Button ID="LoginBtn" runat="server" Height="22px" style="margin-top: 0px" Text="Log in" Width="100px" />
+            <a href="Register.aspx">No account? Register here.</a>
+        </p>
+    </div>
+	<ul>
+        <li>
+            <asp:TextBox ID="SearchBox" runat="server" Width="100px"></asp:TextBox>
+            <asp:Button ID="SearchBtn" runat="server" style="margin-top: 0px" Text="Quick Search"/>&nbsp;
+        </li>
+        <li><a href="UbiquitousSearch.aspx" title="Search for article or review.">Search</a></li>
+		<li><a href="#" title="View your profile.">Profile</a></li><!-- This is going to need to do something with the cache and stuff -->
+		<li><a href="ReviewArchive.aspx" title="Read or write reviews.">Review</a></li>
+        <li><a href="NewsArchive.aspx" title="Read about the latest gaming news.">News</a></li>
+		<li><a href="TestLayout.aspx" title="Go back to the home page.">Home</a></li>
+    </ul>
+        <a href="CheckPage.aspx"><img src="images/bg_visual.jpg" alt="Our beautiful logo containing samples of the games we like to review and report upon." 
+                            title="Ubiquitous Gaming. We're everywhere."/></a>
+    </div>
+    <div>
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <div id="FOOTER">
+<p><a href="#">FAQ</a> &bull; <a href="#">Terms</a> &bull; <a href="#">Privacy Policy</a> &bull; <a href="#">About Us</a></p>
+<p>Ubiquitous &copy; 2014 </p>
+<p><a href="http://www.gettemplate.com">Designed by GetTemplate.com</a></p>
+</div>
+
+</body>
+</html>

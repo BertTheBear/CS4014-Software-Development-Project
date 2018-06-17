@@ -1,0 +1,1 @@
+This stuff is used for selecting a game and getting a list of all reviews for it.
